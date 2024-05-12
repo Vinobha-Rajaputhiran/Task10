@@ -8,14 +8,16 @@ Create a music player web app:
 * Users can give ratings to playlist and audio. Rating displayed is the average rating calculated after each submission.
 
 """
-class Music_Player: #Constructor with initialized variables
+class Music_Player: 
+    #Constructor with initialized variables
     def __init__(self,user):
         self.user= user
         self.genre={}
         self.playlist_ratings = {}
 
     # Methods added for each functionality of the music player
-    def create_playlist(self,playlist_name): #Created a dictionary that contains the playlists for each user
+    def create_playlist(self,playlist_name): 
+        #Created a dictionary that contains the playlists for each user
         print(f"Creating playlist... {playlist_name} for {self.user}")
         self.playlist = []
         while True:
@@ -46,7 +48,8 @@ class Music_Player: #Constructor with initialized variables
             print(song)
 
     def song_rating(self, playlist_name):
-        self.song_ratings={} #Created an empty dictionary that could hold the rating for every song.
+        self.song_ratings={} 
+        #Created an empty dictionary that could hold the rating for every song.
         print(f"Rate the songs in {playlist_name} playlist")
         for song in self.genre[playlist_name]:
             print(f'Song Name: {song}')
